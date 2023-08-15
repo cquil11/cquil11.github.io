@@ -1,5 +1,5 @@
 .site-content {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto 5em;
 }
 
@@ -9,16 +9,16 @@
 }
 
 body {
-    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: "Andale Mono", AndaleMono, monospace;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background-color: #090100;
     min-height: 100vh;
-    line-height: 25px;
 }
 
 .tab {
-    background-color: #500000;
+    background-color: #080000;
 }
 
 .tab ul {
@@ -43,17 +43,19 @@ body {
 }
 
 button {
-    background-color: white;
-    color: black;
-    opacity: .6;
+    background-color: transparent;
+    color: white;
     padding: 2%;
     border-radius: 50%;
     font-weight: bold;
-    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    border-color: white;
+    border-radius: 50%;
+    border-width: 2px;
 }
 
 button:hover {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, .3);
     border-color: white;
     border-radius: 50%;
     border-width: 2px;
@@ -73,13 +75,14 @@ button:hover {
     text-decoration: none;
     display: block;
     padding: 8px;
-    background-color: #500000;
 }
 
 .site-header {
+    background-color: #080000;
+    box-shadow: 0 0 18px 18px #080000 inset;     
     padding: 25px;
     text-align: center;
-    background-image: url("../pics/header-2.jpg");
+    background-image: url("../pics/maroon-b.jpg");
     color: white;
     font-size: 30px;
 }
@@ -87,10 +90,6 @@ button:hover {
 .site-header a {
     text-decoration: none;
     color: white;
-}
-
-.site-header .wrapper {
-    padding: 15px;
 }
 
 .site-content .wrapper {
@@ -102,26 +101,43 @@ button:hover {
 }
 
 .name-title {
-    width: 640px;
+    float: left;
+    width: 500px;
     height: auto;
-    margin: 0 auto;
     padding: 10px;
     position: relative;
 }
 
 table {
-    background: #EFECEC;
+    background-color: rgb(80 80 80 / 30%);
     border: 2px solid #E6E3E3;
     padding: 2%;
     line-height: 1;
     width: 100%;
 }
 
+td img {
+    border-radius: 50%;
+}
+
+td {
+    padding: 1em;
+}
+
 h1,
 h2,
 h3,
 h4 {
-    color: #500000;
+    color: #520d0d;
+    text-shadow: -.5px 0 white, 0 .75px white, .5px 0 white, 0 -.5px white;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
 }
 
 h2 {
@@ -130,13 +146,24 @@ h2 {
 
 p, li, td {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 35px;
+    color: white;
+}
+
+.content-bit p, .content-bit li {
+    padding: 30px;
+}
+
+.content-bit li:hover, .content-bit p:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 
 .site-footer {
+    background-color: #080000;
+    box-shadow: 0px 10px 50px #080000, 5px 15px 25px #080000 inset;
     text-align: center;
     padding: 3px;
-    background-image: url("../pics/header-2.jpg");
+    background-image: url("../pics/maroon-b.jpg");
     color: white;
     text-decoration: none;
     margin-top: auto;
@@ -149,6 +176,7 @@ p, li, td {
 
 #portfolio-logo-1 {
     height: 175px;
+    padding: 9%;
 }
 
 a {
