@@ -1,11 +1,18 @@
 .site-content {
     max-width: 1100px;
-    margin: 0 auto 5em;
+    margin: 0 auto 2em;
+    padding: 0 15px;
 }
 
 #wrapper-widget {
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    #wrapper-widget {
+        flex-direction: column;
+    }
 }
 
 body {
@@ -40,6 +47,16 @@ body {
 
 .tab #toggle-button {
     float: right;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .tab li {
+        display: none;
+    }
+    .tab #toggle-button {
+        display: block;
+    }
 }
 
 button {
@@ -65,15 +82,18 @@ button:hover {
     margin: .4em 0;
 }
 
+@media (max-width: 768px) {
+    #main-title-name {
+        font-size: 32px;
+    }
+}
+
 .tab li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px;
     text-decoration: none;
-    display: block;
-    padding: 8px;
-    background-color: #500000;
 }
 
 .site-header {
@@ -98,7 +118,6 @@ button:hover {
     margin: auto;
     display: inline;
     text-align: left;
-    overflow: auto;
 }
 
 .name-title {
@@ -107,6 +126,12 @@ button:hover {
     margin: 0 auto;
     padding: 10px;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .name-title {
+        width: 100%;
+    }
 }
 
 table {
@@ -128,9 +153,21 @@ h2 {
     font-size: 35px;
 }
 
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
 p, li, td {
     font-size: 20px;
     line-height: 25px;
+}
+
+@media (max-width: 768px) {
+    p, li, td {
+        font-size: 16px;
+    }
 }
 
 .site-footer {
@@ -154,4 +191,11 @@ p, li, td {
 a {
     text-decoration: none;
     color: #70ADD3;
+}
+
+/* Mobile Navigation Toggle Button */
+@media (max-width: 768px) {
+    .tab ul.active li {
+        display: block;
+    }
 }
