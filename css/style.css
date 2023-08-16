@@ -1,18 +1,12 @@
 .site-content {
     max-width: 1100px;
-    margin: 0 auto 2em;
+    margin: 0 auto 5em;
     padding: 0 15px;
 }
 
 #wrapper-widget {
     display: flex;
     flex-direction: row;
-}
-
-@media (max-width: 768px) {
-    #wrapper-widget {
-        flex-direction: column;
-    }
 }
 
 body {
@@ -33,6 +27,8 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
 }
 
 .tab li {
@@ -40,51 +36,13 @@ body {
     display: inline;
 }
 
-.tab .main-nav-bar {
-    float: left;
-    margin: auto 0 auto;
-}
-
-.tab #toggle-button {
-    float: right;
-    display: none;
-}
-
 @media (max-width: 768px) {
     .tab li {
-        display: none;
+        float: none;
     }
-    .tab #toggle-button {
-        display: block;
-    }
-}
-
-button {
-    background-color: white;
-    color: black;
-    opacity: .6;
-    padding: 2%;
-    border-radius: 50%;
-    font-weight: bold;
-    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-
-button:hover {
-    background-color: transparent;
-    border-color: white;
-    border-radius: 50%;
-    border-width: 2px;
-    color: white;
-}
-
-#main-title-name {
-    font-size: 45px;
-    margin: .4em 0;
-}
-
-@media (max-width: 768px) {
-    #main-title-name {
-        font-size: 32px;
+    .tab ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -94,6 +52,7 @@ button:hover {
     text-align: center;
     padding: 14px;
     text-decoration: none;
+    background-color: #500000;
 }
 
 .site-header {
@@ -121,17 +80,11 @@ button:hover {
 }
 
 .name-title {
-    width: 640px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     padding: 10px;
     position: relative;
-}
-
-@media (max-width: 768px) {
-    .name-title {
-        width: 100%;
-    }
 }
 
 table {
@@ -142,10 +95,7 @@ table {
     width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     color: #500000;
 }
 
@@ -185,7 +135,8 @@ p, li, td {
 }
 
 #portfolio-logo-1 {
-    height: 175px;
+    height: auto;
+    max-width: 100%;
 }
 
 a {
@@ -193,9 +144,31 @@ a {
     color: #70ADD3;
 }
 
-/* Mobile Navigation Toggle Button */
+button {
+    background-color: white;
+    color: black;
+    opacity: .6;
+    padding: 2%;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+button:hover {
+    background-color: transparent;
+    border-color: white;
+    border-radius: 50%;
+    border-width: 2px;
+    color: white;
+}
+
+#main-title-name {
+    font-size: 45px;
+    margin: .4em 0;
+}
+
 @media (max-width: 768px) {
-    .tab ul.active li {
-        display: block;
+    #main-title-name {
+        font-size: 32px;
     }
 }
