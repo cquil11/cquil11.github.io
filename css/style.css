@@ -20,29 +20,32 @@ body {
 
 .tab {
     background-color: #500000;
+    overflow: hidden; /* Clear floats */
 }
 
 .tab ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+    .tab ul {
+        flex-direction: column;
+    }
+}
+
 .tab li {
-    float: left;
-    display: inline;
+    float: left; /* Default is to line up horizontally */
 }
 
 @media (max-width: 768px) {
     .tab li {
-        float: none;
-    }
-    .tab ul {
-        flex-direction: column;
-        align-items: center;
+        float: none; /* Stack the list items vertically on small screens */
     }
 }
 
@@ -53,6 +56,10 @@ body {
     padding: 14px;
     text-decoration: none;
     background-color: #500000;
+}
+
+.tab li a:hover {
+    background-color: #575757;
 }
 
 .site-header {
